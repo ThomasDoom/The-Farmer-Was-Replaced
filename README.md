@@ -13,3 +13,4 @@ Program in an original language similar to Python to operate agricultural drones
 Playing this game will improve problem-solving skills and coding abilities through programming.
 
 # my scripts in the game
+Super fun and casual, not trying to sweat for the best/most optimal code. just trying to make ideas work and make problems to find a solution! :D

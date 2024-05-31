@@ -14,7 +14,8 @@ def current_crop(crop, LIMIT):
 			return Entities.Carrots
 		else:
 			return None
-		
+
+
 def current_item(CURRENT_CROP, LIMIT):
 	if CURRENT_CROP == Entities.Tree:
 		return Items.Wood
@@ -22,15 +23,18 @@ def current_item(CURRENT_CROP, LIMIT):
 		return Items.Carrot
 	elif CURRENT_CROP == Entities.Grass:
 		return Items.Hay
-		
+
+
 def har():
 	if can_harvest():
 		harvest()
-		
+
+
 def carrot_seed_check():
 	if num_items(Items.Carrot_Seed) < 2:
 		trade(Items.Carrot_Seed)
-		
+
+
 def carrot_till(CURRENT_CROP):
 	if CURRENT_CROP == Entities.Carrots:
 		if get_ground_type() != Grounds.Soil:
@@ -38,7 +42,8 @@ def carrot_till(CURRENT_CROP):
 		plant(CURRENT_CROP)
 	else:
 		plant(CURRENT_CROP)
-		
+
+
 def limit(CURRENT_ITEM, CURRENT_CROP, LIMIT):
 	if num_items(CURRENT_ITEM) < LIMIT:
 		har()
@@ -47,6 +52,7 @@ def limit(CURRENT_ITEM, CURRENT_CROP, LIMIT):
 		har()
 	else:
 		return True
+
 
 def origin():
 	while get_pos_x() != 0:

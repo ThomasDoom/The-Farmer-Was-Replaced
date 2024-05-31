@@ -1,15 +1,23 @@
-# SPECIFY CROP TYPE FOR FARMING // None for all
+# WOOD, CARROTS, AND HAY ARE FULLY AUTOMATED
+#	* SET crop TO "wood", "hay", "carrot", or None
+#	* SET LIMIT TO END LOOP WHEN ITEM AMOUNT REACHES IT 
+#	* SETTING crop TO [None] FARMS ALL 3 CROPS IN ORDER UNTIL LIMIT IS REACHED FOR EACH CROP
+# UP TO FUNCTIONS UNLOCKED. NO WATERING, LISTS, BENCHMARK, ETC. TREES ARE UNLOCKED
+
 crop = None
 
 while True:
-	origin()
+	
 	LIMIT = 18000
+
+	# RESET DRONE TO [0, 0] AND CLEAR CROPS
+	origin()
 	
 	# PRIORITIZE WOOD AND GRASS IF LOW
-	if num_items(Items.Wood) < 8:
+	if num_items(Items.Wood) < 10:
 		CURRENT_CROP = Entities.Tree
 		LIMIT = 1000 # MAX REQ BEFORE RETURING TO ORIGINAL TASK 
-	elif num_items(Items.Hay) < 8:
+	elif num_items(Items.Hay) < 10:
 		CURRENT_CROP = Entities.Grass
 		LIMIT = 1000
 	else:
